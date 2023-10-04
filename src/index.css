@@ -1,0 +1,26 @@
+body {
+    background-color: #000;
+    color: #eee;
+}
+
+button {
+    background-color: #ffb000;
+    border-radius: 6px;
+    width: 100px;
+    height: 32px;
+}
+
+button:hover {
+    background-color: #fbce54;
+}
+
+canvas {
+    margin: 10px auto;
+}
+
+select {
+    height: 30px;
+    padding: 0px 5px;
+    border-radius: 6px;
+    background-color: #ffb000;
+}

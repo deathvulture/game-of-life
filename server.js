@@ -1,15 +1,18 @@
 const handler = require('serve-handler');
 const http = require('http');
 
-const server = http.createServer((request, response) => {
-  // You pass two more arguments for config and middleware
-  // More details here: https://github.com/vercel/serve-handler#options
-  return handler(request, response);
+const PORT = 80;
+const PUBLIC_FOLDER = 'src';
+
+// Create an HTTP server
+const server = http.createServer((req, res) => {
+  // Use serve-handler to serve static files
+  handler(req, res, {
+    public: PUBLIC_FOLDER,
+  });
 });
 
-
-
-
-server.listen(80, () => {
-  console.log('Running at http://localhost:80');
+// Start the server
+server.listen(PORT, () => {
+  console.log('Running at http://localhost:' + PORT);
 });
